@@ -1,0 +1,31 @@
+//Giris? int tipind? 3 ?d?d verilir,
+//onlarin hasilinin m?nfi, sifir v? ya müsb?t oldugunu mü?yy?n ed?n kod yazin. 
+//N?z?r? alin ki, bu hasili hesablamaq long long tipi il? mümkün olmaz.
+ 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int a, b, c;
+    cin >> a >> b >> c;
+    
+    int n = 0;
+    if (a < 0) ++n;  if (b < 0) ++n;   if (c < 0) ++n;
+
+
+    if (a == 0 || b == 0 || c == 0) {
+        cout << "Hasil sifirdir." << endl;
+		
+    } else if (n % 2 == 0 ) {
+        cout << "Hasil musbetdir." << endl;
+		
+    } else {
+        cout << "Hasil menfidir." << endl;
+		
+    }
+
+    return 0;
+}
