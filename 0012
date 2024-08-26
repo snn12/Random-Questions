@@ -1,0 +1,26 @@
+//Giris? a v? b tam ?d?dl?ri verilir, 
+//a uzeri b ?d?dinin 1000000009 ( 10 uzeri 9 +7) ?d?din? qaligini tapin
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    const int MOD = 1000000009;
+    long long a, b;
+    cin >> a >> b;
+
+    long long result = 1;
+    while (b > 0) {
+        if (b % 2 == 1)
+            result = (result * a) % MOD;
+        a = (a * a) % MOD;
+        b /= 2;
+    }
+
+    cout << result << endl;
+
+    return 0;
+}
