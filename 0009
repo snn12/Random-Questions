@@ -1,0 +1,33 @@
+//Giris? dörd h?qiqi ?d?d verilir, h?min ?d?dl?ri düzbucaqlinin t?r?fl?ri kimi istifad? ed? bil?rikmi sualina cavab ver?n proqram yazin.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    double a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    vector<double> sides;
+    
+    sides.push_back(a);
+    sides.push_back(b);
+    sides.push_back(c);
+    sides.push_back(d);
+    
+    
+    
+    sort(sides.begin(), sides.end());
+
+    if ((sides[0] == sides[1] && sides[2] == sides[3]) ||
+        (sides[0] == sides[2] && sides[1] == sides[3]) ||
+        (sides[0] == sides[3] && sides[1] == sides[2])) {
+        cout << "Bu duzbucaqli olar." << endl;
+    } else {
+        cout << "Bu duzbucaqli olmaz." << endl;
+    }
+
+    return 0;
+}
