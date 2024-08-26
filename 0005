@@ -1,0 +1,19 @@
+ //Verilmiş bir tam ədədin (integer) binary formasında 1 olan bitlərin sayını hesablayın.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n;
+    cin >> n;
+
+    bitset<32> b(n); 
+
+    cout << "Binary qarşılığı: " << b << endl
+    cout << b.count() << endl; 
+
+    return 0;
+}
