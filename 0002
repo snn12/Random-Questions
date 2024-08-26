@@ -1,0 +1,25 @@
+//Giris? 3 int tipli ?d?d verilir, onlarin hasilinin milyard ?d?din? böldükd? alinan qaligi tapin. 
+//?min olun ki, kodunuzda overflow x?tasi yoxdur. Yoxlamaq üçün giris? üç ?d?di d? 1000000001 olaraq verin, çixisa kodunuz 1 verm?lidir.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    const int y = 1000000000;
+    
+    long long x = 1LL * a % y;
+    
+    x = (x * b) % y;
+    x = (x * c) % y;
+
+    cout << "(a * b * c) % 1000000000 = " << x << endl;
+
+    return 0;
+}
+
