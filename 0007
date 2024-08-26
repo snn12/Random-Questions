@@ -1,0 +1,20 @@
+//Giris? char tipind? simvol verilir, onun kiçik 
+//h?rf olub olmadigini yoxlayan kod yazin.
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	
+	char ch;
+	cin>>ch;
+	
+	 if (islower(ch)) {
+        cout << "Kicik herf." << endl;
+    } else {
+        cout << "Kicik herf deyil." << endl;
+    }
+    
+    return 0;
+}
