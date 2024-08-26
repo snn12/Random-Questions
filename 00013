@@ -1,0 +1,20 @@
+//Giris? n v? sonra n tam ?d?d verilir, onlardan cütl?rin sayini çixisa ver?n proqram yazin.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int count = 0, num;
+    
+    while (cin >> num) {
+        if (num % 2 == 0) {
+            ++count;
+        }
+    }
+    
+    cout << count << endl;
+    return 0;
+}
