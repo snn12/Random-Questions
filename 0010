@@ -1,0 +1,25 @@
+//Sonu sifirla bitm?y?n ?d?din r?q?ml?rini t?rsin? çevrilmis ?d?di çixisa ver?n kod yazin.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	
+	long long int n;
+    cin >> n;
+
+    long long int r = 0;
+    
+    
+    while (n > 0) {
+        r = r * 10 + n % 10;
+        n /= 10;
+}
+	cout << r << endl;
+    
+    
+    return 0;
+}
