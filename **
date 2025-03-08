@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+double OrtalamaHesabla(const std::vector<int>& ededler) {
+    if (ededler.empty()) return 0.0;
+
+    int cem = 0;
+    for (int eded : ededler) {
+        cem += eded;
+    }
+    
+    return static_cast<double>(cem) / ededler.size();
+}
+
+int main() {
+    std::vector<int> ededler;
+    int eded, say;
+
+    std::cout << "Neçe eded daxil edeceksiniz? ";
+    std::cin >> say;
+
+    std::cout << say << " ededi daxil edin:\n";
+    for (int i = 0; i < say; ++i) {
+        std::cin >> eded;
+        ededler.push_back(eded);
+    }
+
+    double ortalama = OrtalamaHesabla(ededler);
+    std::cout << "Ededlerin ortalamasi: " << ortalama << std::endl;
+
+    return 0;
+}
